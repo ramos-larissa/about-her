@@ -19,6 +19,15 @@ export default function Main() {
             });
     }, [url]);
 
+    useEffect( ( ) => {
+        axios('./aboutHer.json').then(response => {
+            const { data } = response;
+            return data
+        }).catch((error) => {
+            console.log(error);
+        });
+    }, [])
+
     return (
         <>
             <div className="content-title">
