@@ -1,26 +1,32 @@
-import React, {useEffect, useState} from "react";
-import ProdutoService from "../../service/ProdutoService";
-import Header from "../../components/Header";
-
+import React, { useEffect, useState } from "react";
+import TestService from "../../service/TestService";
+import CardImage from "../../components/cardImage";
+import logo from "../../assets/logo.svg";
+import "./styles.css";
 
 export default function Main() {
-    const [produtos, setProdutos] = useState([]);
+    const [body, setBody] = useState(0);
+    const url = "/test-front-basic"
 
-    async function getData() {
-        const response = await ProdutoService.list();
-        setProdutos(response.data);
-    }
-
-    useEffect(() => getData(), []);
+    useEffect(() => {
+        TestService.getFront(url)
+            .then((response) => {
+                setBody(response);
+                return body;
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, [url]);
 
     return (
-        <Header/>
-    // <div>
-    //     {produtos.map((produto) => (
-    //         <div key={produto.ID}>
-    //             {produto.username}
-    //         </div>
-    //     ))}
-    // </div>
-)
+        <>
+            <div className="content-title">
+                <img src={logo} className="logo-title" />
+            </div>
+            <div className="content-card">
+                <CardImage response={body} />
+            </div>
+        </>
+    );
 }

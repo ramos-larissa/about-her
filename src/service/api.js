@@ -1,9 +1,7 @@
-import axios from 'axios';
-import config from "../config";
-
+import axios from "axios";
 
 const api = axios.create({
-    baseURL: config.apiBaseURL
+    baseURL: "https://us-central1-squid-apis.cloudfunctions.net"
 });
 
 export default api;

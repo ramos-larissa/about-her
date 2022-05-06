@@ -1,16 +1,14 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Main from "../pages/Main";
 
-
-export default function Routes(){
+export default function teste() {
     return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/">
-                    <Main/>
-                </Route>
-            </Switch>
-        </BrowserRouter>
-    )
+        <Router>
+                <Routes>
+                    <Route exact path="/" element={<Main />} />
+                    {/* <Route path="*" element={<NotFound />} /> */}
+                </Routes>
+        </Router>
+    );
 }
