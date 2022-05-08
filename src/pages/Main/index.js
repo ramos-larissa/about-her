@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TestService from "../../service/TestService";
-import CardImage from "../../components/cardImage";
-import logo from "../../assets/logo.svg";
+// import CardImage from "../../components/cardImage";
+// import logo from "../../assets/logo.svg";
 import "./styles.css";
 
 export default function Main() {
@@ -19,22 +19,23 @@ export default function Main() {
             });
     }, [url]);
 
-    useEffect( ( ) => {
-        axios('./aboutHer.json').then(response => {
-            const { data } = response;
-            return data
-        }).catch((error) => {
-            console.log(error);
-        });
-    }, [])
+    // useEffect( ( ) => {
+    //     axios('./aboutHer.json').then(response => {
+    //         const { data } = response;
+    //         return data
+    //     }).catch((error) => {
+    //         console.log(error);
+    //     });
+    // }, [])
 
     return (
         <>
             <div className="content-title">
-                <img src={logo} className="logo-title" />
+                {/* <img src={logo} className="logo-title" /> */}
             </div>
             <div className="content-card">
-                <CardImage response={body} />
+            <div class="heart"></div>
+                {/* <CardImage response={body} /> */}
             </div>
         </>
     );

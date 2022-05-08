@@ -1,0 +1,23 @@
+{
+  "card": "Super hero",
+  "question": "question here?",
+  "alternatives":  [
+    {
+      "content":"Mussum Ipsum, cacilds vidis litro abertis. Nec orci ornare consequat.",
+      "isTrue": false
+    },
+    {
+      "content":"Mussum Ipsum, cacilds vidis litro abertis. Nec orci ornare consequat.",
+      "isTrue": false
+    },
+    {
+      "content":"Mussum Ipsum, cacilds vidis litro abertis. Nec orci ornare consequat.",
+      "isTrue": false
+    },
+    {
+      "content":"Mussum Ipsum, cacilds vidis litro abertis. Nec orci ornare consequat.",
+      "isTrue": true
+    }
+  ]
+
+}
