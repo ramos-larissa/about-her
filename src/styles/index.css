@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
+}
+
+.responsive {
+    max-width: 100%;
+}
+
+.img-black {
+    filter: brightness(0);
+}
+
+.img-white {
+    filter: brightness(0) invert(1);
+}
