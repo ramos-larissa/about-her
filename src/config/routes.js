@@ -2,6 +2,7 @@ import React from "react";
 import {BrowserRouter as Router, Route, Routes as Switch} from "react-router-dom";
 import Main from "../pages/Main";
 import Letter from "../pages/Letter";
+import SongsAboutYou from "../pages/SongsAboutYou";
 import NotFound from "../pages/NotFound";
 
 export default function Routes() {
@@ -10,6 +11,7 @@ export default function Routes() {
             <Switch>
                 <Route exact path="/" element={<Main/>}/>
                 <Route exact path="/letter" element={<Letter/>}/>
+                <Route exact path="/songs-about-you" element={<SongsAboutYou/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Switch>
         </Router>

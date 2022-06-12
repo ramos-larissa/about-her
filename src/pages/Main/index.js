@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TestService from "../../service/TestService";
-// import CardImage from "../../components/cardImage";
-// import logo from "../../assets/logo.svg";
+import Menu from "../../components/menu";
 import "./styles.css";
 
 export default function Main() {
@@ -34,7 +33,8 @@ export default function Main() {
                 {/* <img src={logo} className="logo-title" /> */}
             </div>
             <div className="content-card">
-            <div class="heart"></div>
+
+            <Menu/>
                 {/* <CardImage response={body} /> */}
             </div>
         </>

@@ -1,0 +1,36 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.page-songs {
+    background-color: #208bf4;
+    width: auto;
+    height: auto;
+}
+.content-songs{
+    margin-left: 200px;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+.div-song{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.text-songs{
+   text-align: center;
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.title{
+    color: aliceblue;
+    font-weight: 900;
+    font-style: italic;
+}
+.text{
+    font-size: 18px;
+    color: aliceblue;
+    font-weight: 600;
+}
