@@ -4,6 +4,6 @@ import "./styles.css";
 
 export default function Heart(){
     return(
-        <div class="heart"></div>
+        <div class="loader"><div></div></div>
     )
 }

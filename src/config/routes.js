@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Routes as Switch} from "react-router-dom
 import Main from "../pages/Main";
 import Letter from "../pages/Letter";
 import SongsAboutYou from "../pages/SongsAboutYou";
+import Curiosities from "../pages/Curiosities";
 import NotFound from "../pages/NotFound";
 
 export default function Routes() {
@@ -10,8 +11,9 @@ export default function Routes() {
         <Router>
             <Switch>
                 <Route exact path="/" element={<Main/>}/>
-                <Route exact path="/letter" element={<Letter/>}/>
+                <Route exact path="/letters" element={<Letter/>}/>
                 <Route exact path="/songs-about-you" element={<SongsAboutYou/>}/>
+                <Route exact path="/curiosities" element={<Curiosities/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Switch>
         </Router>

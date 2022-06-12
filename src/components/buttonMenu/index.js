@@ -7,21 +7,24 @@ export default function ButtonMenu() {
         <>
             <div id="alling-buttons">
                 <a href="/">
-                    <button>Home</button>
+                    <button className="btn-menu">Home</button>
                 </a>
                 <a href="letters">
-                    <button>Letters</button>
+                    <button className="btn-menu">Letters</button>
                 </a>
                 <a href="songs-about-you">
-                    <button>Songs</button>
+                    <button className="btn-menu">Songs</button>
+                </a>
+                <a href="curiosities">
+                    <button className="btn-menu">Curiosities</button>
                 </a>
                 <a href="goals">
-                    <button>Goals</button>
+                    <button className="btn-menu">Goals</button>
                 </a>
 
-                {/* <button>US</button> */}
+                {/* <button className="btn-menu">US</button> */}
 
-                {/* <button>About me </button> */}
+                {/* <button className="btn-menu">About me </button> */}
             </div>
         </>
     );
