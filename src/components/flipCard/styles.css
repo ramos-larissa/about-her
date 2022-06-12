@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 20px;
 }
 
 /* From uiverse.io by @Clenio21 */
@@ -82,6 +82,7 @@
    /* From uiverse.io by @ShadowShahriar */
 .btn-flip {
     margin-top: 50px;
+    margin-bottom: 20px;
     --border-radius: 15px;
     --border-width: 4px;
     appearance: none;
@@ -89,7 +90,6 @@
     padding: 1em 2em;
     border: 0;
     background-color: #212121;
-    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
     font-size: 18px;
     font-weight: 500;
     color: #fff;
@@ -145,4 +145,9 @@
    
    .btn-flip:active {
     --border-width: 5px;
+   }
+
+   .btn-home-flip{
+    margin-top: 0px!important;
+    margin-left: 2%;
    }

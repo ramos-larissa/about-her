@@ -31,7 +31,6 @@ export default function Main() {
     return (
         <div className="home">
             <Menu />
-
             <div className="center">
                 <ul>
                     <li>
