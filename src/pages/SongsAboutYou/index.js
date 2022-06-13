@@ -19,9 +19,9 @@ export default function SongsAboutYou() {
                             allowfullscreen
                         ></iframe>
                         <div className="text-songs">
-                            <h1 className="title">Exist For Love - Aurora</h1>
+                            <h1 className="title-song">Exist For Love - Aurora</h1>
                             <br />
-                            <p className="text">
+                            <p className="text-song">
                                 "How everything good in life seems to lead back
                                 to you and every single time I run into your
                                 arms I feel like I exist for love. Like I exist
@@ -49,9 +49,9 @@ export default function SongsAboutYou() {
                             allowfullscreen
                         ></iframe>
                         <div className="text-songs">
-                            <h1 className="title">Needy - Ariana Grande</h1>
+                            <h1 className="title-song">Needy - Ariana Grande</h1>
                             <br />
-                            <p className="text">
+                            <p className="text-song">
                                 "Sorry that I think I'm not enough And sorry if
                                 I say sorry way too much. I'ma scream and shout
                                 for what I love. Passionate, but I don’t give no
@@ -75,11 +75,11 @@ export default function SongsAboutYou() {
                             allowfullscreen
                         ></iframe>
                         <div className="text-songs">
-                            <h1 className="title">
+                            <h1 className="title-song">
                                 It's All About You - McFly
                             </h1>
                             <br />
-                            <p className="text">
+                            <p className="text-song">
                                 "It's all about you and I would answer all your
                                 wishes If you asked me too but if you deny me
                                 one of your kisses I don't know what I'd do"
@@ -98,9 +98,9 @@ export default function SongsAboutYou() {
                             allowfullscreen
                         ></iframe>
                         <div className="text-songs">
-                            <h1 className="title">Close To You - Carpenters</h1>
+                            <h1 className="title-song">Close To You - Carpenters</h1>
                             <br />
-                            <p className="text">
+                            <p className="text-song">
                                 "Why do birds suddenly appear everytime you are
                                 near? Just like me, they long to be close to you
                                 Why do stars fall down from the sky every time
@@ -124,11 +124,11 @@ export default function SongsAboutYou() {
                             allowfullscreen
                         ></iframe>
                         <div className="text-songs">
-                            <h1 className="title">
+                            <h1 className="title-song">
                                 Can't Stand It - NeverShoutNever
                             </h1>
                             <br />
-                            <p className="text">
+                            <p className="text-song">
                                 "I've been searching for a girl thats just like
                                 you cause I know that your heart is true. Baby I
                                 love you I never want to let you go the more I

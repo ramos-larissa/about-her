@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "../loader";
 import "./styles.css";
 
-export default function FlipCard() {
+export default function CardRainbow() {
     return (
         <>
             <a href="/">

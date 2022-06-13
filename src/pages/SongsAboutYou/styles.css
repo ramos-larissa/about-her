@@ -24,13 +24,12 @@ body {
     margin-right: 20px;
 }
 
-.title{
+.title-song{
     color: aliceblue;
     font-weight: 900;
     font-style: italic;
 }
-.text{
-    font-size: 18px;
-    color: aliceblue;
-    font-weight: 600;
+.text-song{
+    font-size: 18px !important;
+    color: aliceblue !important;;
 }

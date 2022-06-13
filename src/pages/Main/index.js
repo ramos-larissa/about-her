@@ -81,7 +81,7 @@ export default function Main() {
             </div>
 
             <div>
-            <p class="btn-shine">Don't forget! This website will be under constant construction, as my love for you.</p>
+            <p class="btn-shine text-home">Don't forget! This website will be under constant construction, as my love for you.</p>
             </div>
         </div>
     );

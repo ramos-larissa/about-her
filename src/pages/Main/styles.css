@@ -92,7 +92,7 @@ input[type="checkbox"]:checked ~ div {
     }
 }
 
-p {
+.text-home {
     margin-top: 100px;
     font-weight: 700;
     text-align: center;
