@@ -5,7 +5,7 @@ export default function Goals(){
     return(
         <>
         <h1 className="text-lights">hello world
-        </h1>
+        </h1> 
         </>
     )
 }
