@@ -11,25 +11,25 @@ import Typography from "@mui/material/Typography";
 export default function BodyLetter() {
     const [data, setData] = useState(0);
 
-    useEffect(() => {
-        axios("./contentJson/letter.json")
-            .then((response) => {
-                console.log(response.data, "data no response");
-                setData(response.data);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }, [""]);
+    // useEffect(() => {
+    //     axios("./contentJson/letter.json")
+    //         .then((response) => {
+    //             console.log(response.data, "data no response");
+    //             setData(response.data);
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         });
+    // }, [""]);
 
-    if (data) {
-        console.log(data, "putinha");
-        return <h1>teste</h1>;
-    }
+    // if (data) {
+    //     console.log(data, "putinha");
+    //     return <h1>teste</h1>;
+    // }
 
     return (
         <>
-            <Box sx={{ minWidth: 275 }}>
+            <Box sx={{ maxWidth: 575 }}>
                 <Card variant="outlined">
                     <CardContent>
                         <Typography
