@@ -6,10 +6,14 @@ import axios from "axios";
 export default function CardRainbow() {
     const [data, setData] = useState(false);
     const [text, setText] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+
+    /**
+     * data from json 
+     */
     useEffect(() => {
         axios("./contentJson/curiosities.json")
             .then((response) => {
-                console.log(response.data, "data no response");
                 setData(response.data);
             })
             .catch((error) => {
@@ -17,10 +21,18 @@ export default function CardRainbow() {
             });
     }, [""]);
 
+    /**
+     *
+     * @returns string
+     */
     const handleClick = () => {
+        setIsLoading(true);
         const keys = Object.keys(data);
         console.log(keys[Math.floor(Math.random() * keys.length)]);
         const number = keys[Math.floor(Math.random() * keys.length)];
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 1000);
         if (number) {
             setText(data[number].content);
             return text;
@@ -34,12 +46,14 @@ export default function CardRainbow() {
             </a>
             <div className="container-flip">
                 <div class="card">
-                    {text}
-                    {console.log("text render!!", text)}
+                    {isLoading ? <Loader className="loader" /> : text}
                 </div>
-                <button onClick={handleClick} className="btn-flip">
-                    Hey, you! Click me, please =D{" "}
-                    {/* <Loader className="loader" /> */}
+                <button
+                    onClick={handleClick}
+                    className="btn-flip"
+                    disabled={isLoading}
+                >
+                    Hey, you! Click me, please =D
                 </button>
             </div>
         </>

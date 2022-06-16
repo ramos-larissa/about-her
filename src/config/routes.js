@@ -1,7 +1,7 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes as Switch} from "react-router-dom";
 import Main from "../pages/Main";
-import Letter from "../pages/Letter";
+import Letter from "../pages/Letters";
 import SongsAboutYou from "../pages/SongsAboutYou";
 import Goals from "../pages/Goals";
 import Curiosities from "../pages/Curiosities";

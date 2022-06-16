@@ -1,51 +1,58 @@
-import React, {useEffect, useState} from "react";
-import "./styles.css"
+import React, { useEffect, useState } from "react";
+import "./styles.css";
 import axios from "axios";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 export default function BodyLetter() {
     const [data, setData] = useState(0);
 
     useEffect(() => {
-        axios('./contentJson/letter.json').then(response => {
-            console.log(response.data, "data no response")
-            setData(response.data)
-        }).catch((error) => {
-            console.log(error);
-        });
-    }, [''])
+        axios("./contentJson/letter.json")
+            .then((response) => {
+                console.log(response.data, "data no response");
+                setData(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, [""]);
 
-
-    if(data){
-        console.log(data, "putinha")
-        return(
-            <h1>TEM ALGUMA COISA NESSA MERDA DESSE DATA PUTA QUE PARIU ME DEIXA</h1>
-        )
+    if (data) {
+        console.log(data, "putinha");
+        return <h1>teste</h1>;
     }
+
     return (
         <>
-            <h1>NAO TEM NADA NESSA PORRA</h1>
-            {/*{data?.content.map((item, index) => {*/}
-            {/*    console.log(item, index)*/}
-            {/*   return <h1>{item.paragraph}</h1>*/}
-            {/*    switch (item) {*/}
-            {/*        case 'paragraph':*/}
-            {/*            return <p key={index}>{item.paragraph}</p>;*/}
-            {/*            break;*/}
-            {/*        case 'image':*/}
-            {/*            return <img src={item.image} alt={'default'} key={index}/>;*/}
-            {/*            break;*/}
-            {/*        case 'title':*/}
-            {/*            return <h2 key={index}>{item.title}</h2>;*/}
-            {/*            break;*/}
-            {/*        case 'video':*/}
-            {/*            return <iframe width={"200"} key={index} src={item.video}/>;*/}
-            {/*        default:*/}
-            {/*            console.log("error");*/}
-            {/*    }*/}
-
-
-            {/*})}*/}
-
+            <Box sx={{ minWidth: 275 }}>
+                <Card variant="outlined">
+                    <CardContent>
+                        <Typography
+                            sx={{ fontSize: 14 }}
+                            color="text.secondary"
+                            gutterBottom
+                        >
+                            Word of the Day
+                        </Typography>
+                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                            adjective
+                        </Typography>
+                        <Typography variant="body2">
+                            well meaning and kindly.
+                            <br />
+                            {'"a benevolent smile"'}
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button size="small">Learn More</Button>
+                    </CardActions>
+                </Card>
+            </Box>
         </>
-    )
+    );
 }
