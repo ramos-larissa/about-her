@@ -47,7 +47,7 @@
     },
     "git": {
         "scripts": {
-            "pre-push": "surge --project ./ --domain prickly-stocking.surge.sh/"
+            "pre-push": "surge --project ./ --domain prickly-stocking.surge.sh"
         }
     }
 }
