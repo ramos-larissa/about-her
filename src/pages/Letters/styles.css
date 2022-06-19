@@ -1,3 +1,10 @@
+.page-letters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-back-letters{
     margin: 2% !important;
 }
+

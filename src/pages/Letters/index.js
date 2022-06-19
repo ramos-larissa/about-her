@@ -10,7 +10,9 @@ export default function Letters() {
             <div className="btn-back-letters">
                 <ButtonBack />
             </div>
-            <BodyLetter />
+            <div className="page-letters">
+                <BodyLetter />
+            </div>
         </>
     );
 }

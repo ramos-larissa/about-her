@@ -3585,6 +3585,11 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
+commander@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.6.0.tgz#9df7e52fb2a0cb0fb89058ee80c3104225f37e1d"
+  integrity sha512-PhbTMT+ilDXZKqH8xbvuUY2ZEQNef0Q7DKxgoEKb4ccytsdvVVJmYqR0sGbi96nxU6oGrwEIQnclpK2NBZuQlg==
+
 commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
@@ -5484,6 +5489,13 @@ getpass@^0.1.1:
   integrity sha1-Xv+OPmhNVprkyysSgmBOi6YhSfo=
   dependencies:
     assert-plus "^1.0.0"
+
+git-scripts@^0.6.4:
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/git-scripts/-/git-scripts-0.6.4.tgz#b5198c4d6fb95362ca8c718cce342e1ac01635c4"
+  integrity sha512-WON2sCnnmqs01crLErDZFTBvKoy4vojRUrJnXOx6mAbSNAinU1eKvAmFlsNtZNv0VArbYMFX2y+wXaWEaHohdg==
+  dependencies:
+    commander "2.6.0"
 
 glob-parent@^3.1.0:
   version "3.1.0"

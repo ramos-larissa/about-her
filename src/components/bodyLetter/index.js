@@ -3,56 +3,64 @@ import "./styles.css";
 import axios from "axios";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import Loader from "../loader";
 
 export default function BodyLetter() {
     const [data, setData] = useState(0);
+    const [card, setCard] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
-    // useEffect(() => {
-    //     axios("./contentJson/letter.json")
-    //         .then((response) => {
-    //             console.log(response.data, "data no response");
-    //             setData(response.data);
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //         });
-    // }, [""]);
-
-    // if (data) {
-    //     console.log(data, "putinha");
-    //     return <h1>teste</h1>;
-    // }
+    useEffect(() => {
+        axios("./contentJson/letter.json")
+            .then((response) => {
+                setData(response.data);
+                setIsLoading(!data);
+                if (data) {
+                    setCard(
+                        data.map((item, index) => {
+                            return (
+                                <Box
+                                    key={index}
+                                    sx={{ width: 1000, mt: 10 }}
+                                    className={"card-letter"}
+                                >
+                                    <Card variant="outlined">
+                                        <CardContent className="body-letter">
+                                            <div class="title-letter">
+                                                <h1>
+                                                    <span>{item.title}</span>
+                                                </h1>
+                                            </div>
+                                            <div className="body-letter-text">
+                                                <p className="text-letter">
+                                                    {item.content}
+                                                </p>
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                </Box>
+                            );
+                        })
+                    );
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, [data]);
 
     return (
         <>
-            <Box sx={{ maxWidth: 575 }}>
-                <Card variant="outlined">
-                    <CardContent>
-                        <Typography
-                            sx={{ fontSize: 14 }}
-                            color="text.secondary"
-                            gutterBottom
-                        >
-                            Word of the Day
-                        </Typography>
-                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                            adjective
-                        </Typography>
-                        <Typography variant="body2">
-                            well meaning and kindly.
-                            <br />
-                            {'"a benevolent smile"'}
-                        </Typography>
-                    </CardContent>
-                    <CardActions>
-                        <Button size="small">Learn More</Button>
-                    </CardActions>
-                </Card>
-            </Box>
+            <div>
+                <div class="title-letter">
+                    <h1 class="color-title-letter">
+                        Letters about you
+                        <span class="color-title-letter">Eu te amo</span>
+                    </h1>
+                </div>
+                {isLoading ? <Loader className="loader" /> : card}
+            </div>
         </>
     );
 }

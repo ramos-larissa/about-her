@@ -1,3 +1,28 @@
-h1{
-    color: #1a1a1a;
+.color-title-letter {
+    color: whitesmoke !important;
+}
+
+.card-letter {
+    box-shadow: 9px 9px 33px #b3b3fa, -9px -9px 33px #80b3fa;
+    transform: translateY(-2px);
+}
+
+.body-letter{
+    background-color: #18191f !important;
+
+}
+
+.text-letter{
+    color: whitesmoke;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.body-letter-text{
+    width: 100%;
+    text-align: justify;
 }
