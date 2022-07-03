@@ -1,0 +1,13 @@
+.containerCuriosities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+@media (max-width: 640px) { 
+    .containerCuriosities {
+        max-width: 600px;
+    }
+  }
