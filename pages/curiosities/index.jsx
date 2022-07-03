@@ -44,7 +44,7 @@ export default function Curiosities() {
     return (
         <>
         <MenuBottom/>
-            <Link to="/">
+            <Link href="/">
                 <button className={`${btn.btnRainbow} ${btn.btnHome}`}>
                     HOME
                 </button>
