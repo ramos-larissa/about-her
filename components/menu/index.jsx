@@ -1,23 +1,24 @@
 import styles from '../../styles/components/Menu.module.css';
+import Link from 'next/link';
 
 export default function Menu() {
   return (
     <div className={styles.allingButtons}>
-    <a href="/">
+    <Link to="/">
         <button className={styles.btnMenu}>Home</button>
-    </a>
-    <a href="letters">
+    </Link>
+    <Link to="letters">
         <button className={styles.btnMenu}>Letters</button>
-    </a>
-    <a href="songs-about-you">
+    </Link>
+    <Link to="songs-about-you">
         <button className={styles.btnMenu}>Songs</button>
-    </a>
-    <a href="curiosities">
+    </Link>
+    <Link to="curiosities">
         <button className={styles.btnMenu}>Curiosities</button>
-    </a>
-    <a href="goals">
+    </Link>
+    <Link to="goals">
         <button className={styles.btnMenu}>Goals</button>
-    </a>
+    </Link>
 </div>
   )
 }

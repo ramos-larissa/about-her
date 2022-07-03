@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "@mui/material/Link";
 import Loading from "../../components/loadingRainbow";
 import card from "../../styles/components/CardRainbow.module.css";
 import btn from "../../styles/components/ButtonRainbow.module.css";
@@ -43,11 +44,11 @@ export default function Curiosities() {
     return (
         <>
         <MenuBottom/>
-            <a href="/">
+            <Link to="/">
                 <button className={`${btn.btnRainbow} ${btn.btnHome}`}>
                     HOME
                 </button>
-            </a>
+            </Link>
 
             <div className={styles.containerCuriosities}>
                 <div className={card.cardRainbow}>
