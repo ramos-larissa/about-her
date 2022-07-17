@@ -10,6 +10,7 @@ import MarkAsUnreadIcon from '@mui/icons-material/MarkAsUnread';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import QuizIcon from '@mui/icons-material/Quiz';
 import ListAltIcon from '@mui/icons-material/ListAlt';
+import PublicIcon from '@mui/icons-material/Public';
 
 export default function MenuBottom() {
     const [state, setState] = React.useState(false);
@@ -44,6 +45,8 @@ export default function MenuBottom() {
                 <Button href="curiosities"><QuizIcon className={styles.iconMenuBottom}  fontSize="large"/>Curiosities</Button>
                 <br />
                 <Button href="goals"><ListAltIcon className={styles.iconMenuBottom} fontSize="large"/>Goals</Button>
+                <br />
+                <Button href="timezone"><PublicIcon className={styles.iconMenuBottom} fontSize="large"/>Timezone</Button>
             </List>
         </Box>
     );

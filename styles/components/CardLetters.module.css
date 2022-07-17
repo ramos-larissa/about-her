@@ -1,154 +1,51 @@
-/* Card ============================================*/
+.card{
+  display: inline-block;
+  width: 45%;
+  padding: 4rem 1rem 7rem 1rem;
+  background-color: teal;
+  position: relative;
+  margin: 1rem;
+  box-sizing: border-box;
+}
 
-/* Area to hold an individual card */
-.cardSection {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  /* A container to hold the flip card and the inside page */
-  .card {
-    background-color: rgba(0,0,0, .05);
-    box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
-    height: 15rem;
-    position: relative;
-    transition: all 1s ease;
-    width: 15rem;
-  }
-  
-  /* Flip card - covering both the front and inside front page */
-  
-  /* An outer container to hold the flip card. This excludes the inside page */
-  .flipCard {
-    height: 15rem;
-    perspective: 100rem;
+
+
+.card::after{
+  content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    background-color: rgb(239, 240, 197);
+    top: 0px;
+    right: 0px;
+    border-bottom: 20px solid darken(rgb(239, 240, 197), 5%);
+    border-left: 20px solid darken(rgb(239, 240, 197), 5%);
+    border-right: 20px solid #1e2531;
+    border-top: 20px solid #1e2531;
     position: absolute;
-    right: 0;
-    transition: all 1s ease;
-    visibility: hidden;
-    width: 15rem;
-    z-index: 100;
-  }
-  
-  /* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
-  /* This is done so content in the inside page can be selected */
-  .flipCard > * {
-    visibility: visible;
-  }
-  
-  /* An inner container to hold the flip card. This excludes the inside page */
-  .flipCardContainer {
-    height: 100%;
+    filter: drop-shadow(-5px 5px 3px rgba(0,0,0,0.5));
+    box-sizing: border-box;
+}
+
+.card::before{
+  content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-top: 40px solid darken(rgb(239, 240, 197), 5%);
+    border-right: 40px solid darken(rgb(239, 240, 197), 5%);
+    border-left: 20px solid #1e2531;
+    border-bottom: 20px solid #1e2531;
+    bottom: 0px;
+    left: 0px;
     position: absolute;
-    right: 0;
-    transform-origin: left;
-    transform-style: preserve-3d;
-    transition: all 1s ease;
-    width: 100%;
-  }
-  
-  .cardFront,
-  .cardBack {
-    backface-visibility: hidden;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  
-  /* Styling for the front side of the flip card */
-  
-  /* container for the front side */
-  .cardFront {
-    background-color: #fafbfa;
-    height: 15rem;
-    width: 15rem;
-  }
-  
-  /* Front side's top section */
-  .cardFrontTp {
-    align-items: center;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
-    display: flex;
-    flex-direction: column;
-    height: 12rem;
-    justify-content: center;
-    padding: .75rem;
-  }
-  
-  .cardFrontTp {
-    background: linear-gradient(
-      to bottom,
-      #cfdff5,
-      #f3f0c8
-    );
-  }
-  
-  /* Front card's bottom section */
-  .cardFrontBt {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Styling for the back side of the flip card */
-  
-  .cardBack {
-    background-color: #fafbfa;
-    transform: rotateY(180deg);
-  }
-  
-  /* Specifically targeting the <video> element */
-  .videoContainer {
-    clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
-    height: auto;
-    min-height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
-  
-  /* Inside page */
-  
-  .insidePage {
-    background-color: #fafbfa;
-    box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
-    height: 100%;
-    padding: 1rem;
-    position: absolute;
-    right: 0;
-    transition: all 1s ease;
-    width: 15rem;
-    z-index: 1;
-  }
-  
-  .insidePageContainer {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    text-align: center; 
-    width: 100%;
-  }
-  
-  /* Functionality ====================================*/
-  
-  /* This is to keep the card centered (within its container) when opened */
-  .card:hover {
-    box-shadow:
-    -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
-    width: 30rem;
-  }
-  
-  /* When the card is hovered, the flip card container will rotate */
-  .card:hover .flipCardContainer {
-    transform: rotateY(-180deg);
-  }
-  
-  /* When the card is hovered, the shadow on the inside page will shrink to the left */
-  .card:hover .insidePage {
-    box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
-  }
+    filter: drop-shadow(7px -7px 5px rgba(0,0,0,0.5));
+    margin-right: 10%;
+    box-sizing: border-box;
+}
+
+.card::nth-of-type(1){
+  margin-right: 9%;
+  box-sizing: border-box;
+}
+

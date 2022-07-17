@@ -65,76 +65,51 @@ export default function CardLetters() {
   return (
     <>
       <div>
-        <div className={styles.card}>
-          {/* <Image alt="selo" src={Selo} /> */}
-
-          <section className={styles.cardSection}>
-            <div className={styles.card}>
-              <div className={styles.flipCard}>
-                <div className={styles.flipCardContainer}>
-                  <div className={styles.cardFront}>
-                    <div className={styles.cardFrontTp}>
-                      <h2 className={styles.cardFrontHeading}>
-                        <Image src={SeloBR} />
-                      </h2>
-                    </div>
-
-                    <div className={styles.cardFrontBt}>
-                      <p className={styles.cardFrontTextView}>View me</p>
-                    </div>
-                  </div>
-                  <div className={styles.cardBack}>
-                    <Image src={Selo} />
-                  </div>
-                </div>
-              </div>
-
-              <div className={styles.insidePage}>
-                <div className={styles.insidePageContainer}>
-                  <h3
-                    className={`${styles.insidePageHeading} ${styles.insidePageHeading}`}
-                  >
-                    For urban lovers
-                  </h3>
-                  <p className={styles.insidePageText}>
-                    As cities never sleep, there are always something going on,
-                    no matter what time!
-                  </p>
-                  <Button variant="outlined" onClick={handleClickOpen}>
-                 Read more
-                </Button>
-                </div>
-              
-              </div>
-            </div>
-          </section>
+        <div className={styles.pageCard}>
+          <div className={styles.card}>
+            <h2>Titel Lorem</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              culpa blanditiis sit, laboriosam at praesentium maxime esse
+              voluptas. Quos aliquid, possimus eum itaque accusamus nihil
+              reprehenderit nesciunt excepturi quas sint.
+            </p>
+            <Button variant="outlined" onClick={handleClickOpen}>
+              Read more
+            </Button>
+            
+          </div>
         </div>
         <div className={styles.modalLetter}>
-        <BootstrapDialog
-        onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
-        open={open}
-      >
-        <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Modal title
-        </BootstrapDialogTitle>
-        <DialogContent dividers>
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec
-            ullamcorper nulla non metus auctor fringilla.
-          </Typography>
-        </DialogContent>
-      </BootstrapDialog>
+          <BootstrapDialog
+            onClose={handleClose}
+            aria-labelledby="customized-dialog-title"
+            open={open}
+          >
+            <BootstrapDialogTitle
+              id="customized-dialog-title"
+              onClose={handleClose}
+            >
+              Modal title
+            </BootstrapDialogTitle>
+            <DialogContent dividers>
+              <Typography gutterBottom>
+                Cras mattis consectetur purus sit amet fermentum. Cras justo
+                odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
+                risus, porta ac consectetur ac, vestibulum at eros.
+              </Typography>
+              <Typography gutterBottom>
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+                dolor auctor.
+              </Typography>
+              <Typography gutterBottom>
+                Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+                cursus magna, vel scelerisque nisl consectetur et. Donec sed
+                odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+              </Typography>
+            </DialogContent>
+          </BootstrapDialog>
         </div>
       </div>
     </>
